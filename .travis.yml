@@ -1,0 +1,9 @@
+language: objective-c
+
+before_install:
+    - brew update
+    - brew install xctool appledoc22
+
+script: 
+xctool -project AtoZSingleton.xcodeproj -scheme Build
+xctool -project AtoZSingleton.xcodeproj -scheme AtoZSingleton test

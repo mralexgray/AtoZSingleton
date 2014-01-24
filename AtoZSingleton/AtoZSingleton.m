@@ -1,9 +1,9 @@
 
 // AZSingleton.m
 
-#import "AZSingleton.h"
+#import "AtoZSingleton.h"
 
-@implementation AZIBSingleton
+@implementation AtoZIBSingleton
 + (instancetype) shared		{  __strong static id _sharedInstance = nil;     static dispatch_once_t onlyOnce;
       dispatch_once(&onlyOnce, ^{   _sharedInstance = [[self _alloc] _init]; }); return _sharedInstance;
 }
@@ -15,7 +15,7 @@
  
 @end
 
-@implementation AZSingleton
+@implementation AtoZSingleton
 
 static NSMutableDictionary 		  *_sharedInfo = nil; // Dictionary that holds all instances of AZSingleton subclasses
 + (void) initialize					{ 	_sharedInfo = _sharedInfo ?: NSMutableDictionary.new;											}
@@ -34,7 +34,7 @@ static NSMutableDictionary 		  *_sharedInfo = nil; // Dictionary that holds all 
 	}
 	return shared;
 }
-- (id)init	{	if (self != super.init) return nil; _inited = YES; return self; }
+- (id)init	{	if (!(self = super.init)) return nil; _inited = YES; return self; }
 
 @end
 

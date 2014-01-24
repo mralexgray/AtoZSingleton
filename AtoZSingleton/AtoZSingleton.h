@@ -3,7 +3,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface      AZIBSingleton : NSObject + (instancetype) shared; @end
+#define AtoZIBSingleton AZUNOIB
+#define AtoZSingleton   AZUNO
+
+@interface      AtoZIBSingleton : NSObject		+ (instancetype) shared;		@end
 
 
 /**	`AZSingleton` is a generic class for Mac OSX and iOS that implements all the required methods to implement a singleton object. 
@@ -13,10 +16,9 @@
 		When subclassing `AZSingleton` you should think about your subclass as an ordinary class, `AZSingleton` makes sure that there is only one instance of your class.
 		If you want to make your own initializer or override `-init` method your should check whether your singleton has already been initialized with `isInitialized` property to prevent repeated initialization.
 */
-@interface AZSingleton : NSObject
+@interface AtoZSingleton : NSObject
 
 /// 	@name Obtaining the Shared Instance
-
 /**	Returns the shared instance of the receiver class, creating it if necessary.	You shoudn't override this method in your subclasses.
 		@return Shared instance of the receiver class.
 */
@@ -42,7 +44,7 @@
 		return self;
 	}
 */
-@property (assign, readonly) BOOL inited;
+@property BOOL inited;
 
 @end
 

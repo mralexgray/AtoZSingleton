@@ -1,0 +1,437 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		7B648C011892C10500D65465 /* Build */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 7B648C021892C10500D65465 /* Build configuration list for PBXAggregateTarget "Build" */;
+			buildPhases = (
+				7B648C071892C13000D65465 /* ShellScript */,
+			);
+			dependencies = (
+				7B648C061892C10E00D65465 /* PBXTargetDependency */,
+			);
+			name = Build;
+			productName = Build;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		0A1F37721729A76D0003594D /* AtoZSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A1F37421729A6620003594D /* AtoZSingleton.m */; };
+		7B1813E218922FF9005EC9DE /* IBSingletonOwner.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B586ED0180D6F39001D0850 /* IBSingletonOwner.xib */; };
+		7B648BFB1892BB5000D65465 /* libAtoZSingleton.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A1F37481729A6C10003594D /* libAtoZSingleton.a */; };
+		7B8B14D518922D1200EEDADC /* AtoZSingletonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B8B14D418922D1200EEDADC /* AtoZSingletonTests.m */; };
+		7BFCC916180F00B30022D8F9 /* AtoZSingleton.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A1F37411729A6620003594D /* AtoZSingleton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7B648C051892C10E00D65465 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0A1F373B1729A3100003594D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0A1F37471729A6C10003594D;
+			remoteInfo = AtoZSingleton;
+		};
+		7B8B14D718922D1200EEDADC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0A1F373B1729A3100003594D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0A1F37471729A6C10003594D;
+			remoteInfo = AtoZSingleton;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0A1F37411729A6620003594D /* AtoZSingleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AtoZSingleton.h; path = AtoZSingleton/AtoZSingleton.h; sourceTree = "<group>"; };
+		0A1F37421729A6620003594D /* AtoZSingleton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AtoZSingleton.m; path = AtoZSingleton/AtoZSingleton.m; sourceTree = "<group>"; };
+		0A1F37481729A6C10003594D /* libAtoZSingleton.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAtoZSingleton.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B586ED0180D6F39001D0850 /* IBSingletonOwner.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = IBSingletonOwner.xib; path = AtoZSingletonTests/IBSingletonOwner.xib; sourceTree = "<group>"; };
+		7B648BFF1892BC0700D65465 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.md; sourceTree = "<group>"; };
+		7B648C001892BC0700D65465 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		7B648C081892C3FA00D65465 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
+		7B8B14CA18922D1200EEDADC /* AtoZSingletonTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AtoZSingletonTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B8B14D418922D1200EEDADC /* AtoZSingletonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AtoZSingletonTests.m; path = AtoZSingletonTests/AtoZSingletonTests.m; sourceTree = "<group>"; };
+		7B9D8808181D59C800043489 /* Mac-StaticLibrary.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Mac-StaticLibrary.xcconfig"; path = "/Volumes/2T/ServiceData/AtoZ.framework/AtoZ/AtoZAutoBox/../../xcconfigs/Mac OS X/Mac-StaticLibrary.xcconfig"; sourceTree = "<absolute>"; };
+		7B9D8809181D59D700043489 /* Test.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Test.xcconfig; path = /Volumes/2T/ServiceData/AtoZ.framework/AtoZ/AtoZAutoBox/ObjcAssociatedObjectHelpers/UnitTests/../../../../xcconfigs/Base/Configurations/Test.xcconfig; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7B8B14C718922D1200EEDADC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B648BFB1892BB5000D65465 /* libAtoZSingleton.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0A1F373A1729A3100003594D = {
+			isa = PBXGroup;
+			children = (
+				7B648BFC1892BBE600D65465 /* AtoZSingleton */,
+				0A1F37411729A6620003594D /* AtoZSingleton.h */,
+				0A1F37421729A6620003594D /* AtoZSingleton.m */,
+			);
+			sourceTree = "<group>";
+		};
+		0A1F37491729A6C10003594D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0A1F37481729A6C10003594D /* libAtoZSingleton.a */,
+				7B8B14CA18922D1200EEDADC /* AtoZSingletonTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7B648BFC1892BBE600D65465 /* AtoZSingleton */ = {
+			isa = PBXGroup;
+			children = (
+				7B648C081892C3FA00D65465 /* .travis.yml */,
+				7B648BFF1892BC0700D65465 /* LICENSE.md */,
+				7B648C001892BC0700D65465 /* README.md */,
+				0A1F37491729A6C10003594D /* Products */,
+				7B8B14D418922D1200EEDADC /* AtoZSingletonTests.m */,
+				7B586ED0180D6F39001D0850 /* IBSingletonOwner.xib */,
+				7B9D8809181D59D700043489 /* Test.xcconfig */,
+				7B9D8808181D59C800043489 /* Mac-StaticLibrary.xcconfig */,
+			);
+			name = AtoZSingleton;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0A1F37461729A6C10003594D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BFCC916180F00B30022D8F9 /* AtoZSingleton.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0A1F37471729A6C10003594D /* AtoZSingleton */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A1F376C1729A6C20003594D /* Build configuration list for PBXNativeTarget "AtoZSingleton" */;
+			buildPhases = (
+				0A1F37441729A6C10003594D /* Sources */,
+				0A1F37461729A6C10003594D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AtoZSingleton;
+			productName = DOSingleton;
+			productReference = 0A1F37481729A6C10003594D /* libAtoZSingleton.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		7B8B14C918922D1200EEDADC /* AtoZSingletonTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B8B14D918922D1200EEDADC /* Build configuration list for PBXNativeTarget "AtoZSingletonTests" */;
+			buildPhases = (
+				7B8B14C618922D1200EEDADC /* Sources */,
+				7B8B14C718922D1200EEDADC /* Frameworks */,
+				7B8B14C818922D1200EEDADC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7B8B14D818922D1200EEDADC /* PBXTargetDependency */,
+			);
+			name = AtoZSingletonTests;
+			productName = AtoZSingletonTests;
+			productReference = 7B8B14CA18922D1200EEDADC /* AtoZSingletonTests.octest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0A1F373B1729A3100003594D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = DO;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Dmitry Obukhov";
+				TargetAttributes = {
+					7B8B14C918922D1200EEDADC = {
+						TestTargetID = 0A1F37471729A6C10003594D;
+					};
+				};
+			};
+			buildConfigurationList = 0A1F373E1729A3100003594D /* Build configuration list for PBXProject "AtoZSingleton" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0A1F373A1729A3100003594D;
+			productRefGroup = 0A1F37491729A6C10003594D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0A1F37471729A6C10003594D /* AtoZSingleton */,
+				7B8B14C918922D1200EEDADC /* AtoZSingletonTests */,
+				7B648C011892C10500D65465 /* Build */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7B8B14C818922D1200EEDADC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B1813E218922FF9005EC9DE /* IBSingletonOwner.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7B648C071892C13000D65465 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/appledoc  --print-settings \\\n--project-name \"${PROJECT_NAME}\" --project-company \"mrgray.com\"  --company-id \"com.mrgray\" \\\n--create-html --create-docset --install-docset \\\n--keep-undocumented-objects \\\n--keep-undocumented-members \\\n--keep-intermediate-files \\\n--merge-categories \\\n--repeat-first-par \\\n--no-warn-invalid-crossref \\\n--no-repeat-first-par \\\n--logformat xcode \\\n--exit-threshold 2 \\\n--ignore \".m\"\\\n--index-desc \"${SRCROOT}/README.md\" \\\n--output \"${BUILT_PRODUCTS_DIR}/\" \\\n\"${PROJECT_DIR}/${PROJECT_NAME}\"\n\nexit $?\n\n#--include \"${PROJECT_DIR}/${PROJECT_NAME}/Documentation/Images\" \\\n# --ignore \"LoadableCategory.h\" \\\n#--docset-platform-family \"macosx\" \\";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0A1F37441729A6C10003594D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A1F37721729A76D0003594D /* AtoZSingleton.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B8B14C618922D1200EEDADC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B8B14D518922D1200EEDADC /* AtoZSingletonTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7B648C061892C10E00D65465 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0A1F37471729A6C10003594D /* AtoZSingleton */;
+			targetProxy = 7B648C051892C10E00D65465 /* PBXContainerItemProxy */;
+		};
+		7B8B14D818922D1200EEDADC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0A1F37471729A6C10003594D /* AtoZSingleton */;
+			targetProxy = 7B8B14D718922D1200EEDADC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0A1F373F1729A3100003594D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		0A1F37401729A3100003594D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		0A1F376D1729A6C20003594D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B9D8808181D59C800043489 /* Mac-StaticLibrary.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PRODUCT_NAME = AtoZSingleton;
+			};
+			name = Debug;
+		};
+		0A1F376E1729A6C20003594D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B9D8808181D59C800043489 /* Mac-StaticLibrary.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PRODUCT_NAME = AtoZSingleton;
+			};
+			name = Release;
+		};
+		7B648C031892C10500D65465 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7B648C041892C10500D65465 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		7B8B14DA18922D1200EEDADC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B9D8809181D59D700043489 /* Test.xcconfig */;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+			};
+			name = Debug;
+		};
+		7B8B14DB18922D1200EEDADC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B9D8809181D59D700043489 /* Test.xcconfig */;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0A1F373E1729A3100003594D /* Build configuration list for PBXProject "AtoZSingleton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A1F373F1729A3100003594D /* Debug */,
+				0A1F37401729A3100003594D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0A1F376C1729A6C20003594D /* Build configuration list for PBXNativeTarget "AtoZSingleton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A1F376D1729A6C20003594D /* Debug */,
+				0A1F376E1729A6C20003594D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B648C021892C10500D65465 /* Build configuration list for PBXAggregateTarget "Build" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B648C031892C10500D65465 /* Debug */,
+				7B648C041892C10500D65465 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		7B8B14D918922D1200EEDADC /* Build configuration list for PBXNativeTarget "AtoZSingletonTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B8B14DA18922D1200EEDADC /* Debug */,
+				7B8B14DB18922D1200EEDADC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0A1F373B1729A3100003594D /* Project object */;
+}
