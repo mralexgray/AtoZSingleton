@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
-		7B648C011892C10500D65465 /* Build */ = {
+		7B648C011892C10500D65465 /* AtoZSingletonDocs */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 7B648C021892C10500D65465 /* Build configuration list for PBXAggregateTarget "Build" */;
+			buildConfigurationList = 7B648C021892C10500D65465 /* Build configuration list for PBXAggregateTarget "AtoZSingletonDocs" */;
 			buildPhases = (
 				7B648C071892C13000D65465 /* ShellScript */,
 			);
 			dependencies = (
 				7B648C061892C10E00D65465 /* PBXTargetDependency */,
 			);
-			name = Build;
+			name = AtoZSingletonDocs;
 			productName = Build;
 		};
 /* End PBXAggregateTarget section */
@@ -56,8 +56,6 @@
 		7B648C081892C3FA00D65465 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		7B8B14CA18922D1200EEDADC /* AtoZSingletonTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AtoZSingletonTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B8B14D418922D1200EEDADC /* AtoZSingletonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AtoZSingletonTests.m; path = AtoZSingletonTests/AtoZSingletonTests.m; sourceTree = "<group>"; };
-		7B9D8808181D59C800043489 /* Mac-StaticLibrary.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Mac-StaticLibrary.xcconfig"; path = "/Volumes/2T/ServiceData/AtoZ.framework/AtoZ/AtoZAutoBox/../../xcconfigs/Mac OS X/Mac-StaticLibrary.xcconfig"; sourceTree = "<absolute>"; };
-		7B9D8809181D59D700043489 /* Test.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Test.xcconfig; path = /Volumes/2T/ServiceData/AtoZ.framework/AtoZ/AtoZAutoBox/ObjcAssociatedObjectHelpers/UnitTests/../../../../xcconfigs/Base/Configurations/Test.xcconfig; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +97,6 @@
 				0A1F37491729A6C10003594D /* Products */,
 				7B8B14D418922D1200EEDADC /* AtoZSingletonTests.m */,
 				7B586ED0180D6F39001D0850 /* IBSingletonOwner.xib */,
-				7B9D8809181D59D700043489 /* Test.xcconfig */,
-				7B9D8808181D59C800043489 /* Mac-StaticLibrary.xcconfig */,
 			);
 			name = AtoZSingleton;
 			sourceTree = "<group>";
@@ -182,7 +178,7 @@
 			targets = (
 				0A1F37471729A6C10003594D /* AtoZSingleton */,
 				7B8B14C918922D1200EEDADC /* AtoZSingletonTests */,
-				7B648C011892C10500D65465 /* Build */,
+				7B648C011892C10500D65465 /* AtoZSingletonDocs */,
 			);
 		};
 /* End PBXProject section */
@@ -251,6 +247,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -258,13 +255,13 @@
 		0A1F37401729A3100003594D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				OTHER_LDFLAGS = "";
 				SDKROOT = macosx;
 			};
 			name = Release;
 		};
 		0A1F376D1729A6C20003594D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7B9D8808181D59C800043489 /* Mac-StaticLibrary.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -295,7 +292,6 @@
 		};
 		0A1F376E1729A6C20003594D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7B9D8808181D59C800043489 /* Mac-StaticLibrary.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -334,7 +330,6 @@
 		};
 		7B8B14DA18922D1200EEDADC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7B9D8809181D59D700043489 /* Test.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -362,12 +357,19 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Cocoa,
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
 		7B8B14DB18922D1200EEDADC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7B9D8809181D59D700043489 /* Test.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -390,6 +392,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Cocoa,
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
@@ -414,7 +424,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7B648C021892C10500D65465 /* Build configuration list for PBXAggregateTarget "Build" */ = {
+		7B648C021892C10500D65465 /* Build configuration list for PBXAggregateTarget "AtoZSingletonDocs" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7B648C031892C10500D65465 /* Debug */,
