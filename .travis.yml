@@ -5,5 +5,5 @@ before_install:
     - brew install xctool appledoc22
 
 script: 
-xctool -project AtoZSingleton.xcodeproj -scheme Build
-xctool -project AtoZSingleton.xcodeproj -scheme AtoZSingleton test
+- xctool -project AtoZSingleton.xcodeproj -scheme Build
+- xctool -project AtoZSingleton.xcodeproj -scheme AtoZSingleton test
