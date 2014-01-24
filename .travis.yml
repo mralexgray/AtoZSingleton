@@ -6,5 +6,5 @@ before_install:
   - brew install https://raw.github.com/Homebrew/homebrew-versions/master/appledoc22.rb
 
 script: 
-  - xctool -project AtoZSingleton.xcodeproj -scheme Build
+  - xctool -project AtoZSingleton.xcodeproj -scheme AtoZSingletonDocs
   - xctool -project AtoZSingleton.xcodeproj -scheme AtoZSingleton test
