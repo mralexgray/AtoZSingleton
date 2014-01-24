@@ -1,6 +1,7 @@
 language: objective-c
 
 before_install:
+    - brew tap homebrew/versions
     - brew update
     - brew install xctool appledoc22
 
