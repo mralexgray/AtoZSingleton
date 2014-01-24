@@ -75,3 +75,6 @@ http://cocoadocs.org/docsets/DOSingleton
 DOSingleton is available under the MIT license. See the [LICENSE.md](LICENSE.md) file for more info.
 
 Feel free to use it and contribute!
+
+
+coveralls.rb ??
