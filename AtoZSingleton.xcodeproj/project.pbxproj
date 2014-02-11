@@ -208,7 +208,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/appledoc  --print-settings \\\n--project-name \"${PROJECT_NAME}\" --project-company \"mrgray.com\"  --company-id \"com.mrgray\" \\\n--create-html --create-docset --install-docset \\\n--keep-undocumented-objects \\\n--keep-undocumented-members \\\n--keep-intermediate-files \\\n--merge-categories \\\n--repeat-first-par \\\n--no-warn-invalid-crossref \\\n--no-repeat-first-par \\\n--logformat xcode \\\n--exit-threshold 2 \\\n--ignore \".m\"\\\n--index-desc \"${SRCROOT}/README.md\" \\\n--output \"${BUILT_PRODUCTS_DIR}/\" \\\n\"${PROJECT_DIR}/${PROJECT_NAME}\"\n\nexit $?\n\n#--include \"${PROJECT_DIR}/${PROJECT_NAME}/Documentation/Images\" \\\n# --ignore \"LoadableCategory.h\" \\\n#--docset-platform-family \"macosx\" \\";
+			shellScript = "\n\n/usr/local/bin/appledoc \\\n--print-settings \\\n--project-name \"${PROJECT_NAME}\" \\\n--project-company \"mrgray.com\" \\\n--company-id \"com.mrgray\" \\\n--create-html --create-docset \\\n--keep-undocumented-objects \\\n--keep-undocumented-members \\\n--keep-intermediate-files \\\n--merge-categories \\\n--repeat-first-par \\\n--no-warn-invalid-crossref \\\n--no-repeat-first-par \\\n--logformat xcode \\\n--exit-threshold 2 \\\n--ignore \".m\"\\\n--index-desc \"${SRCROOT}/README.md\" \\\n--output \"${BUILT_PRODUCTS_DIR}/\" \\\n\"${PROJECT_DIR}/${PROJECT_NAME}\"\n\nexit $?\n\n#--include \"${PROJECT_DIR}/${PROJECT_NAME}/Documentation/Images\" \\\n# --ignore \"LoadableCategory.h\" \\\n#--docset-platform-family \"macosx\" \\";
 		};
 /* End PBXShellScriptBuildPhase section */
 
