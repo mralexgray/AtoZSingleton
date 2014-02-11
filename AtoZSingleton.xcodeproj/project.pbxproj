@@ -54,6 +54,7 @@
 		7B648BFF1892BC0700D65465 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.md; sourceTree = "<group>"; };
 		7B648C001892BC0700D65465 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		7B648C081892C3FA00D65465 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
+		7B77755718997B9A002A4CBC /* Mac-StaticLibrary.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Mac-StaticLibrary.xcconfig"; path = "/Volumes/2T/ServiceData/AtoZ.framework/AtoZ/AtoZAutoBox/../../xcconfigs/Mac OS X/Mac-StaticLibrary.xcconfig"; sourceTree = "<absolute>"; };
 		7B8B14CA18922D1200EEDADC /* AtoZSingletonTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AtoZSingletonTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B8B14D418922D1200EEDADC /* AtoZSingletonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AtoZSingletonTests.m; path = AtoZSingletonTests/AtoZSingletonTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,6 +74,7 @@
 		0A1F373A1729A3100003594D = {
 			isa = PBXGroup;
 			children = (
+				7B77755718997B9A002A4CBC /* Mac-StaticLibrary.xcconfig */,
 				7B648BFC1892BBE600D65465 /* AtoZSingleton */,
 				0A1F37411729A6620003594D /* AtoZSingleton.h */,
 				0A1F37421729A6620003594D /* AtoZSingleton.m */,
@@ -262,18 +264,14 @@
 		};
 		0A1F376D1729A6C20003594D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B77755718997B9A002A4CBC /* Mac-StaticLibrary.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
-				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -292,8 +290,8 @@
 		};
 		0A1F376E1729A6C20003594D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B77755718997B9A002A4CBC /* Mac-StaticLibrary.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -301,10 +299,6 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
-				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -431,6 +425,7 @@
 				7B648C041892C10500D65465 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7B8B14D918922D1200EEDADC /* Build configuration list for PBXNativeTarget "AtoZSingletonTests" */ = {
 			isa = XCConfigurationList;

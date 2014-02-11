@@ -1,41 +1,39 @@
 
-// AZSingleton.m
-
 #import "AtoZSingleton.h"
 
 @implementation AtoZIBSingleton
-+ (instancetype) shared		{  __strong static id _sharedInstance = nil;     static dispatch_once_t onlyOnce;
-      dispatch_once(&onlyOnce, ^{   _sharedInstance = [[self _alloc] _init]; }); return _sharedInstance;
+
++ (instancetype) shared                   {   __strong static id _sharedI = nil; static dispatch_once_t uno;
+
+  dispatch_once(&uno, ^{ _sharedI = [[self _alloc] _init]; }); return _sharedI;
+
 }
-+ (id) allocWithZone:(NSZone*)z { return [self shared];              }
-+ (id) alloc                    { return [self shared];              }
-- (id) init                     { return  self;                      }
-+ (id)_alloc                    { return [super allocWithZone:NULL]; }
-- (id)_init                     { return [super init];               }
- 
++           (id) allocWithZone:(NSZone*)z { return [self shared];               }
++           (id) alloc                    { return [self shared];               }
+-           (id) init                     { return  self;                       }
+-           (id)_init                     { return [super init];                }
++           (id)_alloc                    { return [super allocWithZone:NULL];  }
+
 @end
 
-@implementation AtoZSingleton
+@implementation AtoZSingleton static NSMutableDictionary *sharedInfo_; // Dictionary holds all instances of AZSingleton subclasses
 
-static NSMutableDictionary 		  *_sharedInfo = nil; // Dictionary that holds all instances of AZSingleton subclasses
-+ (void) initialize					{ 	_sharedInfo = _sharedInfo ?: NSMutableDictionary.new;											}
++ (void)    initialize              { sharedInfo_ = sharedInfo_ ?: NSMutableDictionary.new; }
 
-+ (id)allocWithZone:	(NSZone*)z 	{ return self.shared;  /* Not allow allocating memory in a different zone */ 	}
-+ (id)copyWithZone:	(NSZone*)z 	{ return self.shared;  /* Not allow copying to a different zone	          */ 	}
++   (id) allocWithZone:(NSZone*)z   { return self.shared; } // Prevent allocating memory in a different zone
++   (id)  copyWithZone: (NSZone*)z  { return self.shared; } // Disallow copying to a different zone
 
 #pragma mark - Instances
 
-+ (instancetype) instance			{ return self.shared; 																			}
-+ (instancetype) shared				{ 			  id shared = nil;
++ (instancetype)   shared { id shared = nil; /* If there's no instance – create one and add it to the dictionary */
 	
-	@synchronized(self) { 	// If there's no instance – create one and add it to the dictionary
-		shared = _sharedInfo[NSStringFromClass(self)] =
-				   _sharedInfo[NSStringFromClass(self)] ?: [super allocWithZone:nil].init;
-	}
+	@synchronized(self) {	shared = sharedInfo_[NSStringFromClass(self)] =
+                                 sharedInfo_[NSStringFromClass(self)] ?: [super allocWithZone:nil].init;	}
 	return shared;
 }
-- (id)init	{	if (!(self = super.init)) return nil; _inited = YES; return self; }
++ (instancetype) instance { return self.shared; 																			}
 
+- (id)               init {	return self = super.init ? _inited = YES, self : nil; }
 @end
 
 

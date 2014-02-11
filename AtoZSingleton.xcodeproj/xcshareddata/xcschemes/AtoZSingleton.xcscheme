@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7B8B14C918922D1200EEDADC"
-               BuildableName = ".octest"
+               BuildableName = "AtoZSingletonTests.octest"
                BlueprintName = "AtoZSingletonTests"
                ReferencedContainer = "container:AtoZSingleton.xcodeproj">
             </BuildableReference>
